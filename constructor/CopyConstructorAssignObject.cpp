@@ -58,9 +58,11 @@ main()
 {
 	CopyConstructorAssignObject obj(5);
 	CopyConstructorAssignObject obj1(obj);
+	 /* Here Copy Constructor will be invoked, as it's done at declaration time */
 	CopyConstructorAssignObject obj3 = obj1;
 	CopyConstructorAssignObject obj4;
 	cout << "Get data after assignment " << obj3.GetData() << "\n";
+	/* Assignment Operator will be invoked, as it's done at declaration time */
 	obj4 = obj1;
 	cout << "Get data after assignment " << obj4.GetData() << "\n";
 }
